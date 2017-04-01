@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gabriel 监控 主页</title>
+    <link href="../../bootstrap-3.3.0-dist/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<ul id="myTab" class="nav nav-tabs cas-tab-head">
+    <li class="active">
+        <a href="#tab1" data-toggle="tab">基础样式</a>
+    </li>
+    <li>
+        <a href="#tab2" data-toggle="tab">图表组件</a>
+    </li>
+    <li>
+        <a href="#tab3" data-toggle="tab">坐标轴</a>
+    </li>
+</ul>
+<form id="myTabContent" class="tab-content cas-tab-content form-inline">
+    <div class="tab-pane fade in active" id="tab1">
+        <div class="cas-tabPanel">
+            <p>线条颜色</p>
+            <div class="form-group">
+                <label>内存</label>
+                <span class="cas-color cas-color-red" ></span>
+            </div>
+            <div class="form-group">
+                <label>磁盘</label>
+                <span class="cas-color cas-color-yellow" ></span>
+            </div>
+            <div class="form-group">
+                <label>CPU</label>
+                <span class="cas-color cas-color-blue" ></span>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>线条宽度</p>
+            <div class="form-group">
+                <label>线条宽度</label>
+                <span class="cas-color cas-color-red" ></span>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>平滑曲线</p>
+            <div class="form-group">
+                <label>平滑曲线</label>
+                <select class="form-control">
+                    <option >是</option>
+                    <option selected="selected">否</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>线条类型</p>
+            <div class="form-group">
+                <label>线条类型</label>
+                <select class="form-control">
+                    <option selected="selected" >solid</option>
+                    <option >dashed</option>
+                    <option >dotted</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>区域填充</p>
+            <div class="form-group">
+                <label>区域填充</label>
+                <select class="form-control">
+                    <option >显示</option>
+                    <option selected="selected">隐藏</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>数据堆叠</p>
+            <div class="form-group">
+                <label>数据堆叠</label>
+                <select class="form-control">
+                    <option selected="selected">显示</option>
+                    <option >隐藏</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>背景颜色</p>
+            <div class="form-group">
+                <label>背景颜色</label>
+                <span class="cas-color cas-color-yellow"></span>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>字体</p>
+            <div class="form-group">
+                <label>字体颜色</label>
+                <span class="cas-color cas-color-yellow" ></span>
+            </div>
+            <div class="form-group">
+                <label>字体大小</label>
+                <select class="form-control">
+                    <option selected="selected">12</option>
+                    <option >14</option>
+                    <option >16</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>字体粗细</label>
+                <select class="form-control">
+                    <option selected="selected" >正常</option>
+                    <option >加粗</option>
+                    <option >更粗</option>
+                    <option ></option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="tab2">
+        <div class="cas-tabPanel">
+            <p>Grid组件</p>
+            <div class="form-group">
+                <label>左侧</label>
+                <input class="form-control width80" value="3%">
+            </div>
+            <div class="form-group">
+                <label>右侧</label>
+                <input class="form-control width80" value="3%">
+            </div>
+            <div class="form-group">
+                <label>上侧</label>
+                <input class="form-control width80" value="3%">
+            </div>
+            <div class="form-group">
+                <label>下侧</label>
+                <input class="form-control width80" value="3%">
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>工具栏</p>
+            <label class="checkbox-inline"><input type="checkbox" >数据视图</label>
+            <label class="checkbox-inline"><input type="checkbox" >动态类型切换</label>
+            <label class="checkbox-inline"><input type="checkbox" >数据区域缩放</label>
+            <label class="checkbox-inline"><input type="checkbox" >重置</label>
+            <label class="checkbox-inline"><input type="checkbox" >导出图片</label>
+        </div>
+        <div class="cas-tabPanel">
+            <p>图例组件</p>
+            <div class="form-group">
+                <label>组件位置</label>
+                <select class="form-control">
+                    <option selected="selected">居中</option>
+                    <option >左对齐</option>
+                    <option >右对齐</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>布局朝向</label>
+                <select class="form-control">
+                    <option selected="selected">横向排列</option>
+                    <option >纵向排列</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>提示框组件</p>
+            <div class="form-group">
+                <label>提示框组件</label>
+                <select class="form-control">
+                    <option selected="selected">显示</option>
+                    <option >隐藏</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>时间轴组件</p>
+            <div class="form-group">
+                <label>时间轴组件</label>
+                <select class="form-control">
+                    <option selected="selected">显示</option>
+                    <option >隐藏</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>区域缩放组件</p>
+            <div class="form-group">
+                <label>区域缩放组件</label>
+                <select class="form-control">
+                    <option selected="selected">显示</option>
+                    <option >隐藏</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>图表标注</p>
+            <div class="form-group">
+                <label>最大值</label>
+                <select class="form-control">
+                    <option selected="selected">显示</option>
+                    <option >隐藏</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>最小值</label>
+                <select class="form-control">
+                    <option selected="selected">显示</option>
+                    <option >隐藏</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>图表标线</p>
+            <div class="form-group">
+                <label>平均线</label>
+                <select class="form-control">
+                    <option selected="selected">显示</option>
+                    <option >隐藏</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>最大值</label>
+                <select class="form-control">
+                    <option >显示</option>
+                    <option selected="selected">隐藏</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>最小值</label>
+                <select class="form-control">
+                    <option >显示</option>
+                    <option selected="selected">隐藏</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>自定义标线</label>
+                <input class="form-control" placeholder="请输入标线数值">
+                <input class="form-control" placeholder="请输入标线名称">
+                <select class="form-control">
+                    <option selected="selected">显示</option>
+                    <option >隐藏</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="tab3">
+        <div class="cas-tabPanel">
+            <p>Y轴</p>
+            <div class="form-group">
+                <label>坐标轴位置</label>
+                <select class="form-control">
+                    <option selected="selected">左侧</option>
+                    <option >右侧</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>坐标轴类型</label>
+                <select class="form-control">
+                    <option selected="selected">数值轴</option>
+                    <option >类目轴</option>
+                    <option >时间轴</option>
+                    <option >对数轴</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>坐标轴名称</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label>名称显示位置</label>
+                <select class="form-control">
+                    <option>开始</option>
+                    <option >中间</option>
+                    <option selected="selected">结尾</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>X轴</p>
+            <div class="form-group">
+                <label>坐标轴位置</label>
+                <select class="form-control">
+                    <option selected="selected">下侧</option>
+                    <option >上侧</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>坐标轴类型</label>
+                <select class="form-control">
+                    <option selected="selected">数值轴</option>
+                    <option >类目轴</option>
+                    <option >时间轴</option>
+                    <option >对数轴</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>坐标轴名称</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label>名称显示位置</label>
+                <select class="form-control">
+                    <option>开始</option>
+                    <option >中间</option>
+                    <option selected="selected">结尾</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+<script src="../../js/jquery.js"></script>
+<script src="../../bootstrap-3.3.0-dist/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

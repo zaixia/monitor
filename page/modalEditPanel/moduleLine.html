@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<body class="index">
+
+
+<div id="setUpMeterID"></div>
+<ul id="myTab" class="nav nav-tabs cas-tab-head">
+    <li class="active">
+        <a href="#tab1" data-toggle="tab">数据配置</a>
+    </li>
+    <li class="btn-meterStyle">
+        <a href="#tab2" data-toggle="tab">基础样式</a>
+    </li>
+    <li class="pull-right btn-previewMeter">
+        <a href="#tab3" data-toggle="tab">预览</a>
+    </li>
+</ul>
+<form id="myTabContent" class="tab-content cas-tab-content form-inline">
+    <div class="tab-pane fade in active" id="tab1">
+        <div class="cas-tabPanel-data">
+            <div class="form-group">
+                <label>数据来源</label>
+                <select class="form-control">
+                    <option selected="selected">数据库S</option>
+                    <option >数据库A</option>
+                </select>
+            </div>
+            <div class="form-group pull-right">
+                <button class="btn btn-primary btn-add-sql" type="button" >创建查询</button>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="tab2">
+        <div class="cas-tabPanel">
+            <label>线条宽度</label>
+            <select class="form-control " id="lineWidth">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="cas-tabPanel">
+            <label>平滑曲线</label>
+            <select class="form-control" id="isSmooth">
+                <option value="true">是</option>
+                <option value="false">否</option>
+            </select>
+        </div>
+        <div class="cas-tabPanel">
+            <label>线条类型</label>
+            <select class="form-control" id="lineStyle">
+                <option value="solid">实线</option>
+                <option value="dashed">虚线</option>
+                <option value="dotted">点线</option>
+            </select>
+        </div>
+        <div class="cas-tabPanel">
+            <label>线条透明度</label>
+            <select class="form-control" id="lineOpacity">
+                <option>1</option>
+                <option>0.9</option>
+                <option>0.8</option>
+                <option>0.7</option>
+                <option>0.6</option>
+                <option>0.5</option>
+                <option>0.4</option>
+                <option>0.3</option>
+                <option>0.2</option>
+                <option>0.1</option>
+                <option>0</option>
+            </select>
+        </div>
+        <div class="cas-tabPanel">
+            <label>区域填充</label>
+            <select class="form-control" id="areaOpacity">
+                <option value="1">是</option>
+                <option value="0">否</option>
+            </select>
+        </div>
+        <div class="cas-tabPanel">
+            <label>图例文字颜色</label>
+            <input class="form-control" id="legendColor" type="text" value="#333">
+        </div>
+        <div class="cas-tabPanel">
+            <label>图例文字大小</label>
+            <select class="form-control" id="legendSize">
+                <option>8</option>
+                <option>10</option>
+                <option>12</option>
+                <option>14</option>
+                <option>16</option>
+                <option>18</option>
+            </select>
+        </div>
+        <div class="cas-tabPanel">
+            <label>字体粗细</label>
+            <select class="form-control" id="textWidth">
+                <option>lighter</option>
+                <option>normal</option>
+                <option>bold</option>
+            </select>
+        </div>
+        <div class="cas-tabPanel">
+            <label>背景颜色</label>
+            <input class="form-control" type="text" value="#333" id="backgroundColor">
+        </div>
+    </div>
+    <div class="tab-pane fade" id="tab3">
+            <div class="cas-tabPanel-preview">
+                <div class="displayMeter" id="showArea"></div>
+            </div>
+        <div><button class="btn btn-save pull-right" type="button" >保存</button></div>
+    </div>
+
+
+
+</form>
+
+<script src="bundle.js"></script>
+
+</body>
+</html>

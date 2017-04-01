@@ -1,0 +1,563 @@
+
+<div>
+<ul id="myTab" class="nav nav-tabs cas-tab-head">
+    <li class="active">
+        <a href="#tab1" data-toggle="tab">数据配置</a>
+    </li>
+    <li>
+        <a href="#tab2" data-toggle="tab">基础样式</a>
+    </li>
+    <li>
+        <a href="#tab3" data-toggle="tab">图表组件</a>
+    </li>
+    <li>
+        <a href="#tab4" data-toggle="tab">坐标轴</a>
+    </li>
+</ul>
+<form id="myTabContent" class="tab-content cas-tab-content form-inline">
+    <div class="tab-pane fade in active" id="tab1">
+        <div class="cas-tabPanel-data">
+            <div class="form-group">
+                <select class="form-control">
+                    <option selected="selected">表1</option>
+                    <option >表2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="form-control">
+                    <option selected="selected">表1</option>
+                    <option >表2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="form-control">
+                    <option selected="selected">表1</option>
+                    <option >表2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="form-control">
+                    <option selected="selected">表1</option>
+                    <option >表2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="form-control">
+                    <option selected="selected">表1</option>
+                    <option >表2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="form-control">
+                    <option selected="selected">表1</option>
+                    <option >表2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="form-control">
+                    <option selected="selected">表1</option>
+                    <option >表2</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel-data">
+            <div class="form-group" style="display: inline-block">
+                <label>数据来源</label>
+                <select class="form-control">
+                    <option selected="selected">数据库S</option>
+                    <option >数据库A</option>
+                </select>
+            </div>
+            <div class="form-group" style="display: inline-block">
+                <button class="btn btn-info pull-right" type="button" >创建查询</button>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="tab2">
+        <div class="cas-tabPanel">
+            <p>线条颜色</p>
+            <div class="lineStyle"></div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>线条宽度</p>
+            <div class="form-group">
+                <label>线条宽度</label>
+                <input class="form-control" name="lineWidth" value="2" type="text">
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>平滑曲线</p>
+            <div class="form-group">
+                <label>平滑曲线</label>
+                <select class="form-control" id="isSmooth">
+                    <option >是</option>
+                    <option selected="selected">否</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>线条类型</p>
+            <div class="form-group">
+                <label>线条类型</label>
+                <select class="form-control" id="lineStyle">
+                    <option selected="selected">实线</option>
+                    <option>虚线</option>
+                    <option>点线</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>线条透明度</p>
+            <div class="form-group">
+                <label>线条透明度</label>
+                <select class="form-control" id="lineOpacity">
+                    <option selected="selected">1</option>
+                    <option>0.9</option>
+                    <option>0.8</option>
+                    <option>0.7</option>
+                    <option>0.6</option>
+                    <option>0.5</option>
+                    <option>0.4</option>
+                    <option>0.3</option>
+                    <option>0.2</option>
+                    <option>0.1</option>
+                    <option>0</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>区域填充</p>
+            <div class="form-group">
+                <label>区域填充</label>
+                <select class="form-control" id="areaOpacity">
+                    <option>1</option>
+                    <option>0.9</option>
+                    <option>0.8</option>
+                    <option>0.7</option>
+                    <option>0.6</option>
+                    <option>0.5</option>
+                    <option>0.4</option>
+                    <option>0.3</option>
+                    <option>0.2</option>
+                    <option>0.1</option>
+                    <option selected="selected">0</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>背景颜色</p>
+            <div class="form-group">
+                <label>背景颜色</label>
+                <span class="cas-color cas-color-yellow backGroundColor" colorIndex="3"></span>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>字体</p>
+            <div class="form-group">
+                <label>字体颜色</label>
+                <span class="cas-color cas-color-yellow textStyleColor" colorIndex="4"></span>
+            </div>
+            <div class="form-group">
+                <label>字体大小</label>
+                <select class="form-control" id="textFontSize">
+                    <option selected="selected">12</option>
+                    <option >14</option>
+                    <option >16</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>字体粗细</label>
+                <select class="form-control" id="textFontWeight">
+                    <option selected="selected" >正常</option>
+                    <option >加粗</option>
+                    <option >更粗</option>
+                    <option >更细</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="tab3">
+        <div class="cas-tabPanel">
+            <p>Grid组件</p>
+            <div class="form-group">
+                <label>左侧</label>
+                <input class="form-control" name="gridLeft" value="3%" type="text">
+            </div>
+            <div class="form-group">
+                <label>右侧</label>
+                <input class="form-control" name="gridRight" value="3%" type="text">
+            </div>
+            <div class="form-group">
+                <label>上侧</label>
+                <input class="form-control" name="gridTop" value="3%" type="text">
+            </div>
+            <div class="form-group">
+                <label>下侧</label>
+                <input class="form-control" name="gridBottom" value="3%" type="text">
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>工具栏</p>
+            <div class="form-group">
+                <input type="checkbox" id="cas-toolbox-1" name="saveAsImage"><label class="checkbox-inline" for="cas-toolbox-1">导出图片</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="cas-toolbox-2" name="restore"><label class="checkbox-inline" for="cas-toolbox-2">配置项还原</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="cas-toolbox-3" name="dataView"><label class="checkbox-inline" for="cas-toolbox-3">数据视图</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="cas-toolbox-4" name="dataZoom"><label class="checkbox-inline" for="cas-toolbox-4">数据区域缩放</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="cas-toolbox-5" name="lineOrBar"><label class="checkbox-inline" for="cas-toolbox-5">折线图/柱状图转换</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="cas-toolbox-6" name="stackOrTiled"><label class="checkbox-inline" for="cas-toolbox-6">数据叠加/数据平铺转换</label>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>图例组件</p>
+            <div class="form-group">
+                <label>组件位置</label>
+                <select class="form-control" id="legendLocation">
+                    <option selected="selected">居中</option>
+                    <option >左对齐</option>
+                    <option >右对齐</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>布局朝向</label>
+                <select class="form-control" id="legendOrient">
+                    <option selected="selected">横向排列</option>
+                    <option >纵向排列</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>提示框组件</p>
+            <div class="form-group">
+                <label>提示框组件</label>
+                <select class="form-control" id="tooltipShow">
+                    <option selected="selected">显示</option>
+                    <option >隐藏</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>区域缩放组件</p>
+            <div class="form-group">
+                <label>区域缩放组件</label>
+                <select class="form-control" id="dataZoomShow">
+                    <option selected="selected">显示</option>
+                    <option >隐藏</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>区域缩放字体颜色</label>
+                <span class="cas-color cas-color-yellow dataZoomTextColor" colorIndex="5"></span>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>图表标注--点标注</p>
+            <div class="form-group">
+                <label>标注形状</label>
+                <select class="form-control" id="lineLabelShape">
+                    <option selected="selected">圆形</option>
+                    <option >矩形</option>
+                    <option >圆角矩形</option>
+                    <option >三角形</option>
+                    <option >菱形</option>
+                    <option >别针</option>
+                    <option >箭头</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>标注大小</label>
+                <input class="form-control" name="lineLabelSize" value="50" type="text">
+            </div>
+            <div class="form-group">
+                <label>最大值</label>
+                <select class="form-control" id="markPointDataMax">
+                    <option selected="selected">显示</option>
+                    <option >隐藏</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>最小值</label>
+                <select class="form-control" id="markPointDataMin
+
+">
+                    <option selected="selected">显示</option>
+                    <option >隐藏</option>
+                </select>
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>图表标注--线标注</p>
+            <div class="form-group">
+                <label>平均线</label>
+                <label><input type="checkbox">系列1</label>
+                <label><input type="checkbox">系列2</label>
+                <label><input type="checkbox">系列3</label>
+
+            </div>
+            <div class="form-group">
+                <label>最大值</label>
+                <label><input type="checkbox">系列1</label>
+                <label><input type="checkbox">系列2</label>
+                <label><input type="checkbox">系列3</label>
+            </div>
+            <div class="form-group">
+                <label>最小值</label>
+                <label><input type="checkbox">系列1</label>
+                <label><input type="checkbox">系列2</label>
+                <label><input type="checkbox">系列3</label>
+            </div>
+            <p>自定义标线</p>
+            <div class="cas-tabPanel">
+                <div class="form-group cas-inline">
+                    <label>系列1</label>
+                </div>
+                <div class="form-group cas-inline">
+                    <input class="form-control" placeholder="请输入标线名称" type="text">
+                </div>
+                <div class="form-group cas-inline">
+                    <input class="form-control" placeholder="请输入标线数值" type="text">
+                </div>
+                <div class="form-group cas-inline" title="添加">
+                    <button type="button" class="btn  glyphicon glyphicon-plus"></button>
+                </div>
+                <div class="form-group cas-inline" title="删除">
+                    <button type="button" class="btn  glyphicon glyphicon-trash"></button>
+                </div>
+                <br>
+                <div class="form-group cas-inline">
+                    <label style="visibility: hidden">系列1</label>
+                </div>
+                <div class="form-group cas-inline">
+                    <input class="form-control" placeholder="请输入标线名称" type="text">
+                </div>
+                <div class="form-group cas-inline">
+                    <input class="form-control" placeholder="请输入标线数值" type="text">
+                </div>
+                <div class="form-group cas-inline" title="添加">
+                    <button type="button" class="btn  glyphicon glyphicon-plus"></button>
+                </div>
+                <div class="form-group cas-inline" title="删除">
+                    <button type="button" class="btn  glyphicon glyphicon-trash"></button>
+                </div>
+            </div>
+            <div class="cas-tabPanel">
+                <div class="form-group cas-inline">
+                    <label>系列2</label>
+                </div>
+                <div class="form-group cas-inline">
+                    <input class="form-control" placeholder="请输入标线名称" type="text">
+                </div>
+                <div class="form-group cas-inline">
+                    <input class="form-control" placeholder="请输入标线数值" type="text">
+                </div>
+                <div class="form-group cas-inline" title="添加">
+                    <button type="button" class="btn  glyphicon glyphicon-plus"></button>
+                </div>
+                <div class="form-group cas-inline" title="删除">
+                    <button type="button" class="btn  glyphicon glyphicon-trash"></button>
+                </div>
+                <br>
+                <div class="form-group cas-inline">
+                    <label style="visibility: hidden">系列2</label>
+                </div>
+                <div class="form-group cas-inline">
+                    <input class="form-control" placeholder="请输入标线名称" type="text">
+                </div>
+                <div class="form-group cas-inline">
+                    <input class="form-control" placeholder="请输入标线数值" type="text">
+                </div>
+                <div class="form-group cas-inline" title="添加">
+                    <button type="button" class="btn  glyphicon glyphicon-plus"></button>
+                </div>
+                <div class="form-group cas-inline" title="删除">
+                    <button type="button" class="btn  glyphicon glyphicon-trash"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="tab4">
+        <div class="cas-tabPanel">
+            <p>Y轴</p>
+            <div class="form-group">
+                <label>坐标轴位置</label>
+                <select class="form-control">
+                    <option selected="selected">上侧</option>
+                    <option >下侧</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>坐标轴刻度对齐</label>
+                <select class="form-control">
+                    <option selected="selected">是</option>
+                    <option >否</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>坐标轴类型</label>
+                <select class="form-control">
+                    <option selected="selected">数值轴</option>
+                    <option >类目轴</option>
+                    <option >时间轴</option>
+                    <option >对数轴</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>坐标轴名称</label>
+                <input class="form-control" type="text">
+            </div>
+
+            <div class="form-group">
+                <label>名称显示位置</label>
+                <select class="form-control">
+                    <option>开始</option>
+                    <option >中间</option>
+                    <option selected="selected">结尾</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>坐标轴单位</label>
+                <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label>坐标轴最小值</label>
+                <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label>坐标轴最大值</label>
+                <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label>坐标轴分割间隔</label>
+                <input class="form-control" type="text">
+            </div>
+        </div>
+        <div class="cas-tabPanel">
+            <p>X轴</p>
+            <div class="form-group">
+                <label>坐标轴位置</label>
+                <select class="form-control">
+                    <option selected="selected">左侧</option>
+                    <option >右侧</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>坐标轴刻度对齐</label>
+                <select class="form-control">
+                    <option selected="selected">是</option>
+                    <option >否</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>坐标轴类型</label>
+                <select class="form-control">
+                    <option selected="selected">数值轴</option>
+                    <option >类目轴</option>
+                    <option >时间轴</option>
+                    <option >对数轴</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>坐标轴名称</label>
+                <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label>名称显示位置</label>
+                <select class="form-control">
+                    <option>开始</option>
+                    <option >中间</option>
+                    <option selected="selected">结尾</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>坐标轴单位</label>
+                <input class="form-control" type="text">
+            </div>
+
+            <div class="form-group">
+                <label>坐标轴最小值</label>
+                <input class="form-control" type="text">
+            </div>
+
+            <div class="form-group">
+                <label>坐标轴最大值</label>
+                <input class="form-control" type="text">
+            </div>
+
+            <div class="form-group">
+                <label>坐标轴分割间隔</label>
+                <input class="form-control" type="text">
+            </div>
+        </div>
+    </div>
+</form>
+<!--颜色选中模态框-->
+<div class="modal fade" id="colorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">配色板</h4>
+            </div>
+            <div class="modal-body">
+                <form class="shadeGuide">
+                    <input id="color1" type="radio" name="color"/><label class="cas-color cas-bgcolor-1" for="color1" colorAttr="#7eb26d"></label>
+                    <input id="color2" type="radio" name="color"/><label class="cas-color cas-bgcolor-2" for="color2" colorAttr="#eab839"></label>
+                    <input id="color3" type="radio" name="color"/><label class="cas-color cas-bgcolor-3" for="color3" colorAttr="#6ed0e0"></label>
+                    <input id="color4" type="radio" name="color"/><label class="cas-color cas-bgcolor-4" for="color4" colorAttr="#ef843c"></label>
+                    <input id="color5" type="radio" name="color"/><label class="cas-color cas-bgcolor-5" for="color5" colorAttr="#e24d42"></label>
+                    <input id="color6" type="radio" name="color"/><label class="cas-color cas-bgcolor-6" for="color6" colorAttr="#1f78c1"></label>
+                    <input id="color7" type="radio" name="color"/><label class="cas-color cas-bgcolor-7" for="color7" colorAttr="#ba43a9"></label>
+                    <input id="color8" type="radio" name="color"/><label class="cas-color cas-bgcolor-8" for="color8" colorAttr="#705da0"></label>
+                    <input id="color9" type="radio" name="color"/><label class="cas-color cas-bgcolor-9" for="color9" colorAttr="#2ec7c9"></label>
+                    <input id="color10" type="radio" name="color"/><label class="cas-color cas-bgcolor-10" for="color10" colorAttr="#b6a2de"></label>
+                    <br/>
+                    <input id="color11" type="radio" name="color"/><label class="cas-color cas-bgcolor-11" for="color11" colorAttr="#5ab1ef"></label>
+                    <input id="color12" type="radio" name="color"/><label class="cas-color cas-bgcolor-12" for="color12" colorAttr="#ffb980"></label>
+                    <input id="color13" type="radio" name="color"/><label class="cas-color cas-bgcolor-13" for="color13" colorAttr="#d87a80"></label>
+                    <input id="color14" type="radio" name="color"/><label class="cas-color cas-bgcolor-14" for="color14" colorAttr="#8d98b3"></label>
+                    <input id="color15" type="radio" name="color"/><label class="cas-color cas-bgcolor-15" for="color15" colorAttr="#e5cf0d"></label>
+                    <input id="color16" type="radio" name="color"/><label class="cas-color cas-bgcolor-16" for="color16" colorAttr="#97b552"></label>
+                    <input id="color17" type="radio" name="color"/><label class="cas-color cas-bgcolor-17" for="color17" colorAttr="#95706d"></label>
+                    <input id="color18" type="radio" name="color"/><label class="cas-color cas-bgcolor-18" for="color18" colorAttr="#dc69aa"></label>
+                    <input id="color19" type="radio" name="color"/><label class="cas-color cas-bgcolor-19" for="color19" colorAttr="#07a2a4"></label>
+                    <input id="color20" type="radio" name="color"/><label class="cas-color cas-bgcolor-20" for="color20" colorAttr="#9a7fd1"></label>
+                    <br/>
+                    <input id="color21" type="radio" name="color"/><label class="cas-color cas-bgcolor-21" for="color21" colorAttr="#588dd5"></label>
+                    <input id="color22" type="radio" name="color"/><label class="cas-color cas-bgcolor-22" for="color22" colorAttr="#f5994e"></label>
+                    <input id="color23" type="radio" name="color"/><label class="cas-color cas-bgcolor-23" for="color23" colorAttr="#c05050"></label>
+                    <input id="color24" type="radio" name="color"/><label class="cas-color cas-bgcolor-24" for="color24" colorAttr="#59678c"></label>
+                    <input id="color25" type="radio" name="color"/><label class="cas-color cas-bgcolor-25" for="color25" colorAttr="#c9ab00"></label>
+                    <input id="color26" type="radio" name="color"/><label class="cas-color cas-bgcolor-26" for="color26" colorAttr="#7eb00a"></label>
+                    <input id="color27" type="radio" name="color"/><label class="cas-color cas-bgcolor-27" for="color27" colorAttr="#6f5553"></label>
+                    <input id="color28" type="radio" name="color"/><label class="cas-color cas-bgcolor-28" for="color28" colorAttr="#c14089"></label>
+                    <input id="color29" type="radio" name="color"/><label class="cas-color cas-bgcolor-29" for="color29" colorAttr="#e01f54"></label>
+                    <input id="color30" type="radio" name="color"/><label class="cas-color cas-bgcolor-30" for="color30" colorAttr="#001852"></label>
+                    <br/>
+                    <input id="color31" type="radio" name="color"/><label class="cas-color cas-bgcolor-31" for="color31" colorAttr="#f5e8c8"></label>
+                    <input id="color32" type="radio" name="color"/><label class="cas-color cas-bgcolor-32" for="color32" colorAttr="#b8d2c7"></label>
+                    <input id="color33" type="radio" name="color"/><label class="cas-color cas-bgcolor-33" for="color33" colorAttr="#c6b38e"></label>
+                    <input id="color34" type="radio" name="color"/><label class="cas-color cas-bgcolor-34" for="color34" colorAttr="#a4d8c2"></label>
+                    <input id="color35" type="radio" name="color"/><label class="cas-color cas-bgcolor-35" for="color35" colorAttr="#f3d999"></label>
+                    <input id="color36" type="radio" name="color"/><label class="cas-color cas-bgcolor-36" for="color36" colorAttr="#d3758f"></label>
+                    <input id="color37" type="radio" name="color"/><label class="cas-color cas-bgcolor-37" for="color37" colorAttr="#dcc392"></label>
+                    <input id="color38" type="radio" name="color"/><label class="cas-color cas-bgcolor-38" for="color38" colorAttr="#2e4783"></label>
+                    <input id="color39" type="radio" name="color"/><label class="cas-color cas-bgcolor-39" for="color39" colorAttr="#82b6e9"></label>
+                    <input id="color40" type="radio" name="color"/><label class="cas-color cas-bgcolor-40" for="color40" colorAttr="#ff6347"></label>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="takeColorSave">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

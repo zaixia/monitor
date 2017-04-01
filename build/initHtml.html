@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gabriel 监控 主页</title>
+</head>
+<body class="index">
+
+<div class="dashboard"></div>
+<div class="cas-header">
+    <span class="header-icon">G</span>
+    <span class="header-title">Gabriel监控主页</span>
+    <div class="constant"></div>
+    <div class="cas-period pull-right" title="时间范围">
+        <span class="glyphicon glyphicon-time"></span><span class="range-startTime"></span><span class="cas-color-1 glyphicon glyphicon-resize-horizontal"></span><span class="glyphicon glyphicon-time"></span><span class="range-endTime"></span>
+    </div>
+    <div class="pull-right">
+        <span class="header-icon-font glyphicon glyphicon-floppy-saved" id="dashboardSave" title="保存" ></span>
+        <span class="header-icon-font glyphicon glyphicon-cog" title="设置"></span>
+        <span class="header-icon-font glyphicon glyphicon-refresh page-date-refresh" title="刷新"></span>
+    </div>
+</div>
+
+<div class="cas-footer">
+    <div class="addDashboardGroup" >添加仪表组</div>
+    版权所有：中科院电子所苏州研究院
+</div>
+
+<!--图表设置模态框-->
+<!--<form id="myModal" >-->
+    <!--<h4 class="modal-title" id="myModalLabel">Modal title</h4>-->
+    <!--<div class="modal-body">-->
+                <!--<div id="setUpMeterID"></div>-->
+                <!--<div class="setUpStyleShow"></div>-->
+    <!--</div>-->
+    <!--<div class="modal-footer">-->
+        <!--<button type="button" class="btn btn-primary" id="setUpPreview">预览</button>-->
+        <!--<button type="button" class="btn btn-primary" data-dismiss="modal" id="setUpsave">保存</button>-->
+    <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</form>-->
+
+
+
+<form class="cas-period-content" style="display:none">
+    <p>时间范围</p>
+    <div class="form-group">
+        <label>起始时间</label>
+        <input class="daterange-input" id="startTime">
+        </div>
+    <div class="form-group">
+        <label>结束时间</label>
+        <input class="daterange-input" id="endTime">
+        </div>
+    <button type="button" class="saveBtn">应用</button>
+    <div class="form-group line-top">
+        <label>快速区间</label>
+        <select class="daterange-input Quick-diameter-select">
+            <option value="0" selected="selected">关闭</option>
+            <option value="5m">最近5分钟</option>
+            <option value="15m">最近15分钟</option>
+            <option value="30m">最近30分钟</option>
+            <option value="1h">最近1小时</option>
+            <option value="3h">最近3小时</option>
+            <option value="6h">最近6小时</option>
+            <option value="12h">最近12小时</option>
+            <option value="1d">最近24小时</option>
+            <option value="7d">最近7天</option>
+            <option value="15d">最近15天</option>
+            <option value="30d">最近30天</option>
+            <option value="60d">最近60天</option>
+            <option value="90d">最近90天</option>
+            <option value="365d">最近1年</option>
+            </select>
+        </div>
+    <div class="form-group line-top">
+        <label>定时刷新</label>
+        <select class="daterange-input refresh-time-select">
+            <option  selected="selected">关闭</option>
+            <option >5s</option>
+            <option >10s</option>
+            <option >30s</option>
+            <option >1m</option>
+            <option >5m</option>
+            <option >15m</option>
+            <option >30m</option>
+            <option >1h</option>
+            <option >2h</option>
+            <option >1d</option>
+            </select>
+        </div>
+    </form>
+
+<script src="bundle.js"  type="text/javascript"></script>
+<script>
+    var start = {
+        elem: '#startTime',
+        format: 'YYYY/MM/DD hh:mm:ss',
+        min: '2000-1-1 00:00:00',
+        max: '2099-06-16 23:59:59', //最大日期
+        istime: true,  //是否开启时间选择
+        isclear: true, //是否显示清空
+        istoday: true, //是否显示今天
+        issure: true, //是否显示确认
+        choose: function(datas){
+            end.min = datas; //开始日选好后，重置结束日的最小日期
+            end.start = datas //将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#endTime',
+        format: 'YYYY/MM/DD hh:mm:ss',
+        min: laydate.now(),
+        max: '2099-06-16 23:59:59',
+        istime: true,  //是否开启时间选择
+        isclear: true, //是否显示清空
+        istoday: true, //是否显示今天
+        issure: true, //是否显示确认
+        choose: function(datas){
+            start.max = datas; //结束日选好后，重置开始日的最大日期
+        }
+    };
+    laydate(start);
+    laydate(end);
+</script>
+</body>
+</html>

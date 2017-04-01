@@ -1,0 +1,237 @@
+/*modal css start*/
+
+/*添加仪表组*/
+/*覆盖模态框样式*/
+.cas-modal-header{
+	padding:15px;
+	color: #fff;
+	background-color: #337ab7;
+	border-color: #2e6da4;
+	font-weight: bold;
+}
+.cas-modal-header .close{
+    opacity:.8;
+	color: #fff;
+	text-shadow:0 1px 1px #000;
+}
+.modal-footer{
+	padding:8px 15px;
+}
+/*modal css end*/
+
+.form-horizontal .form-group{
+	margin: 0 0 10px 0;
+	padding:10px;
+}
+/*layer hack*/
+.layui-layer-title{
+	background:#337ab7 !important;
+	color: #eee !important;
+}
+.daterange-input{
+	width:220px;
+	height:40px;
+	margin:10px auto;
+	text-indent:10px;
+	line-height:40px;
+	color:#337ab7;
+	background: rgba(4,28,53,.9);
+	border: 1px solid #2971b7;
+}
+.laydate_body .laydate_bottom{
+	height:30px !important;
+}
+.header-icon-font{
+	display: inline-block;
+	width:50px;
+	height: 50px;
+	font-size: 1.6rem;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+	color: #fff;
+}
+
+.sql-label{
+	padding-left:10px;
+	color:#eee;
+}
+.layui-layer-title{
+    border: none !important;
+}
+/*查询语句容器*/
+.cas-tabPanel{
+    height:32px;
+	margin: 10px 0;
+    font-size:0;
+}
+
+.cas-tabPanel span{
+    font-size:16px;
+}
+/*查询语句图标*/
+.sql-icon{
+    height:32px;
+    width:32px;
+    text-align: center;
+    margin-left:10px;
+    line-height:32px;
+    color: #fff;
+    border:1px solid #475866;
+    background:rgb(30, 51, 70);
+    font-size:16px;
+}
+/*添加qurry语句按钮*/
+.btn-add-sql{
+    height:32px;
+    line-height:30px;
+    color: #fff;
+    background:#1e3346;
+    border-radius: 0;
+    font-size: 16px;
+    border-left:1px solid #061d32;
+    border-right:1px solid #1e3346;
+    border-top:1px solid #1e3346;
+    border-bottom:1px solid #1e3346;
+}
+.sql-icon:hover{
+    cursor: pointer;
+    background:rgba(0,0,0,.1);
+}
+/*查询语句下拉选框*/
+.cas-tabPanel select{
+    height:32px;
+    min-width:130px;
+	margin-left:10px;
+	background:#1e3346;
+	color: #eee;
+    font-size: 16px;
+	border:1px solid #1e3346;
+}
+
+.cas-tabPanel input{
+    width:130px;
+    margin-left:10px;
+    padding:6px 10px;
+    background:#1e3346;
+    color: #eee;
+    border:1px solid #1e3346;
+}
+.cas-tab-content p{
+	color:#428bca;
+	margin: 5px 0;
+	font-size: large;
+}
+
+/*
+.cas-tabPanel label{
+	color: #eee;
+	padding:0 10px;
+	min-width: 130px;
+}
+*/
+
+/*.cas-tab-content select{*/
+	/*min-width:130px;*/
+	/*margin-left:10px;*/
+	/*border:1px solid #475866;*/
+/*}*/
+.cas-tab-head{
+	margin:10px;
+}
+
+.cas-tab-content{
+	margin:0 10px;
+    overflow-y: auto;
+	border-top: 5px solid #337ab7;
+}
+
+
+.tab-pane .bgcolor{
+    background: rgba(255,255,255,0.1);
+}
+.select-sql{
+    border-left:1px solid #061d32 !important;
+    border-right:1px solid #061d32 !important;
+}
+/*bootstrap tab*/
+.nav-tabs{
+    border-bottom:none;
+}
+/*bootstrap tab*/
+
+.nav-tabs > li > a {
+    margin-right: 0;
+    border-radius: 0;
+    border:1px solid #337ab7;
+}
+
+.nav-tabs > li.active > a {
+    color: #fff;
+    background-color: #337ab7;
+    border: 1px solid #337ab7;
+    border-radius: 0;
+}
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+    color: #fff;
+    background-color: #061d32;
+    border: 1px solid #337ab7;
+}
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: #fff;
+    background-color: #337ab7;
+    border: 1px solid #337ab7;
+    border-radius: 0;
+}
+
+
+/*样式编辑面板*/
+.cas-tabPanel-preview{
+    text-align: center;
+    height: 300px;
+}
+
+
+.displayMeter{
+    margin: 0 auto;
+    width: 900px;
+    height: 300px;
+    top: 10px;
+}
+
+.btn-close{
+    margin-right: 20px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+.btn-save{
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+
+.cp{
+    display:inline-block;
+}
+
+.cp input{
+    display: inherit;
+    width: 200px;
+}
+
+
+.cas-tabPanel select{
+    display: inline-block;
+    width: 200px;
+}
+
+.style-label{
+    color: #eee;
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+    display:inline-block;
+    width: 120px;
+}

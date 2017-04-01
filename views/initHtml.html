@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- 语言设置为中文(简体,中国大陆)-->
+<html lang="zh-CN">
+<head>
+    <!--规定在外部脚本文件中使用的字符编码-->
+    <meta charset="utf-8">
+    <!--如果支持Google Chrome Frame：GCF则使用GCF渲染；-->
+    <!--如果系统安装ie8或版本则使用高版本ie渲染-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--可以让网页的宽度自动适应设备的宽度-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gabriel 监控 主页</title>
+    <link href="bootstrap-3.3.0-dist/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body class="index">
+
+<div class="dashboard"></div>
+
+<div class="cas-addRow">
+    <span class="glyphicon glyphicon-plus" onclick="addDashboardGroup()">添加仪表组</span>
+</div>
+
+
+<div class="cas-header">
+    <i class="headerIcon">G</i>
+    <i class="headerTitle">Gabriel监控主页</i>
+    <span class="cas-header-icon glyphicon glyphicon-cog" title="设置"></span>
+    <span class="cas-header-icon glyphicon glyphicon-floppy-saved" title="保存"></span>
+    <span class="constant"></span>
+    <div class="pull-right">
+        <span class="cas-header-icon glyphicon glyphicon-refresh" title="刷新" onclick="refresh()"></span>
+    </div>
+    <div class="cas-period pull-right" title="时间范围">
+        <span class="glyphicon glyphicon-time"></span><span class="range-startTime"></span><span class="cas-color-1 glyphicon glyphicon-resize-horizontal"></span><span class="glyphicon glyphicon-time"></span><span class="range-endTime"></span>
+    </div>
+</div>
+<form class="cas-period-content">
+    <p>时间范围</p>
+    <div class="form-group">
+        <label>起始时间</label>
+        <input id="startTime" class="Wdate" type="text" onFocus="WdatePicker({onpicked:function(){endTime.focus();},dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:'#F{$dp.$D(\'endTime\')}'})"/>
+    </div>
+    <div class="form-group">
+        <label>结束时间</label>
+        <input id="endTime" class="Wdate" type="text" onFocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:'#F{$dp.$D(\'startTime\')}'})"/>
+    </div>
+    <button type="button" class="saveBtn">应用</button>
+    <div class="form-group line-top">
+        <label>快速区间</label>
+        <select class="Quick-diameter-select">
+            <option value="0" selected="selected">关闭</option>
+            <option value="5m">最近5分钟</option>
+            <option value="15m">最近15分钟</option>
+            <option value="30m">最近30分钟</option>
+            <option value="1h">最近1小时</option>
+            <option value="3h">最近3小时</option>
+            <option value="6h">最近6小时</option>
+            <option value="12h">最近12小时</option>
+            <option value="1d">最近24小时</option>
+            <option value="7d">最近7天</option>
+            <option value="15d">最近15天</option>
+            <option value="30d">最近30天</option>
+            <option value="60d">最近60天</option>
+            <option value="90d">最近90天</option>
+            <option value="365d">最近1年</option>
+        </select>
+    </div>
+    <div class="form-group line-top">
+        <label>定时刷新</label>
+        <select class="refresh-time-select">
+            <option  selected="selected">关闭</option>
+            <option >5s</option>
+            <option >10s</option>
+            <option >30s</option>
+            <option >1m</option>
+            <option >5m</option>
+            <option >15m</option>
+            <option >30m</option>
+            <option >1h</option>
+            <option >2h</option>
+            <option >1d</option>
+        </select>
+    </div>
+</form>
+
+<div class="cas-footer">
+    版权所有：中科院电子所苏州研究院
+</div>
+
+<!--图表修改模态框-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="图表修改模态框" aria-hidden="true" draggable="true">
+    <div class="modal-dialog">
+        <div class="modal-content width800">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <!--生成仪表的DIV-->
+                <div class="cas-panel-body"><div class="cas-chart-container overflowY" style="width: 770px" id="setUpMeter"></div></div>
+                <!--生成样式修改的DIV-->
+                <div class="setUpStyleShow"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="setUpPreview">预览</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="setUpsave">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/highcharts-3d.js"></script>
+<script src="bootstrap-3.3.0-dist/dist/js/bootstrap.min.js"></script>
+<script src="js/makeMeter.js"></script>
+<script src="js/castheme.js"></script>
+<script src="js/queryToData.js"></script>
+<script src="js/styleModel.js"></script>
+<script src="js/initApp.js"></script>
+<script src="js/nodeChange.js"></script>
+<script src="js/setUpMeter.js"></script>
+<script src="js/dateRange.js"></script>
+<script src="js/nodeChange.js"></script>
+<script src="My97DatePicker/WdatePicker.js" language="javascript" type="text/javascript" ></script>
+<!--注释-->
+<script>
+    /*    改变浏览器窗口大小，页面自动刷新*/
+/*    $(window).resize(function(){
+        location.reload();
+        console.log("11111111111111")
+    });*/
+
+    $(".cas-period").click( function () {
+        $(".cas-period-content").toggle();
+    });
+    var dashboardGroup = "<div class='container-fluid'><div class='cas-toggle-title'><span class='cas-title'></span><ul class='cas-title-toolbox'><li class='toggleTitle'><span class='glyphicon glyphicon-resize-small'></span><i>折叠</i></li><li class='addDB'><span class='glyphicon glyphicon-plus'></span><i>创建仪表</i></li><li><span class='glyphicon glyphicon-cog cas-title-toolbox-1'></span><i>仪表组设置</i></li><li class='removeDBG'><span class='glyphicon glyphicon-remove cas-title-toolbox-1'></span><i>删除仪表组</i></li></ul></div><div class='row'>" +
+            "</div>";
+    function addDashboardGroup() {
+        $(".dashboard").append(dashboardGroup);
+    }
+    /*页面刷新*/
+    function refresh() {
+        window.location.reload();
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<body class="index">
+
+
+<div id="setUpMeterID"></div>
+<ul id="myTab" class="nav nav-tabs cas-tab-head">
+    <li class="active">
+        <a href="#tab1" data-toggle="tab">数据配置</a>
+    </li>
+    <li class="btn-meterStyle">
+        <a href="#tab2" data-toggle="tab">基础样式</a>
+    </li>
+    <li class="pull-right btn-previewMeter">
+        <a href="#tab3" data-toggle="tab">预览</a>
+    </li>
+</ul>
+<form id="myTabContent" class="tab-content cas-tab-content form-inline">
+    <div class="tab-pane fade in active" id="tab1">
+        <div class="cas-tabPanel bgcolor">
+            <span class="sql-label">数据来源</span>
+            <select class="select-sql selectDatabase">
+                <option ></option>
+            </select>
+            <button class="pull-right btn-add-sql" type="button" >创建查询</button>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="tab2">
+        <div class="cas-tabPanel">
+            <span class="style-label">图例文字颜色</span>
+            <div class="cp"><input class="form-control colorPicker" id="legendColor" type="text"></div>
+        </div>
+        <div class="cas-tabPanel">
+            <span class="style-label">图例文字大小</span>
+            <select class="form-control" id="legendSize">
+                <option>8</option>
+                <option>10</option>
+                <option>12</option>
+                <option>14</option>
+                <option>16</option>
+                <option>18</option>
+            </select>
+        </div>
+        <div class="cas-tabPanel">
+            <span class="style-label">图例文字粗细</span>
+            <select class="form-control" id="legendWidth">
+                <option>lighter</option>
+                <option>normal</option>
+                <option>bold</option>
+            </select>
+        </div>
+
+        <div class="cas-tabPanel">
+            <span class="style-label">标注文字颜色</span>
+            <div class="cp"><input class="form-control colorPicker" id="labelColor" type="text"></div>
+        </div>
+        <div class="cas-tabPanel">
+            <span class="style-label">标注文字大小</span>
+            <select class="form-control" id="labelSize">
+                <option>7</option>
+                <option>9</option>
+                <option>11</option>
+                <option>13</option>
+                <option>15</option>
+                <option>17</option>
+            </select>
+        </div>
+        <div class="cas-tabPanel">
+            <span class="style-label">标注文字粗细</span>
+            <select class="form-control" id="labelWidth">
+                <option>lighter</option>
+                <option>normal</option>
+                <option>bold</option>
+            </select>
+        </div>
+
+        <div class="cas-tabPanel">
+            <span class="style-label">饼图立体度</span>
+            <select class="form-control" id="pieDepth">
+                <option>15</option>
+                <option>25</option>
+                <option>35</option>
+                <option>45</option>
+                <option>55</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="tab-pane fade" id="tab3">
+            <div class="cas-tabPanel-preview">
+                <div class="displayMeter" id="showArea"></div>
+            </div>
+        <div><button class="btn btn-save pull-right" type="button" >保存</button>
+            <button class="btn btn-close pull-right" type="button" >关闭</button></div>
+    </div>
+
+
+
+</form>
+
+<script src="bundle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<body class="index">
+<div id=""></div>
+<ul id="myTab" class="nav nav-tabs cas-tab-head">
+    <li class="active">
+        <a href="#tab1" data-toggle="tab">数据配置</a>
+    </li>
+    <li class="btn-meterStyle">
+        <a href="#tab2" data-toggle="tab">基础样式</a>
+    </li>
+    <li class="pull-right btn-previewMeter">
+        <a href="#tab3" data-toggle="tab">预览</a>
+    </li>
+</ul>
+<form id="myTabContent" class="tab-content cas-tab-content form-inline">
+    <div class="tab-pane fade in active" id="tab1">
+        <div class="cas-tabPanel bgcolor">
+            <span class="sql-label">数据来源</span>
+            <select class="select-sql selectDatabase">
+                <option ></option>
+            </select>
+            <button class="pull-right btn-add-sql" type="button" >创建查询</button>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="tab2">
+        <div class="cas-tabPanel">
+            <span class="style-label">数字颜色</span>
+            <div class="cp"><input  class="form-control colorPicker" type="text" id="titleColor"/></div>
+        </div>
+        <div class="cas-tabPanel">
+            <span class="style-label">数字大小</span>
+            <select class="form-control" id="titleSize" >
+                <option>30</option>
+                <option>35</option>
+                <option>40</option>
+                <option>45</option>
+                <option>50</option>
+                <option>55</option>
+                <option>60</option>
+
+            </select>
+        </div>
+        <div class="cas-tabPanel">
+            <span class="style-label">数字粗细</span>
+            <select class="form-control" id="titleWeight" >
+                <option>lighter</option>
+                <option>normal</option>
+                <option>bold</option>
+            </select>
+        </div>
+        <div class="cas-tabPanel">
+            <span class="style-label">圈颜色</span>
+            <div class="cp"><input class="form-control colorPicker" id="areaColor"></div>
+        </div>
+        <div class="cas-tabPanel">
+            <span class="style-label">圈粗细-外半径</span>
+            <select class="form-control" id="out_R" >
+                <option>75%</option>
+                <option>65%</option>
+                <option>55%</option>
+                <option>45%</option>
+                <option>35%</option>
+            </select>
+        </div>
+        <div class="cas-tabPanel">
+            <span class="style-label">圈粗细-内半径</span>
+            <select class="form-control" id="in_R" >
+                <option>80%</option>
+                <option>70%</option>
+                <option>60%</option>
+                <option>50%</option>
+                <option>40%</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="tab3">
+        <div class="cas-tabPanel-preview">
+            <div class="displayMeter" id="showArea"></div>
+        </div>
+        <div><button class="btn btn-save pull-right" type="button" >保存</button>
+        <button class="btn btn-close pull-right" type="button" >关闭</button></div>
+    </div>
+</form>
+
+<script src="bundle.js"></script>
+
+</body>
+</html>
