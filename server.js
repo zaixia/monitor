@@ -101,7 +101,7 @@ app.get('/constantValue',function (req,res) {
 
 
 //测试用的样式数据
-var fakeStyleData=require('./test/fakeStyleData');
+//var fakeStyleData=require('./test/fakeStyleData');
 
 /*服务器第一次启动时，将初始的仪表样式数据保存到MongoDB数据库中
 let style_Data=handleStyleData();
